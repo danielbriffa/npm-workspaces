@@ -1,11 +1,11 @@
-import { Supervisor } from 'types';
+import { Cashier } from 'packages\\mocks';
 import { faker } from '@faker-js/faker';
 
-export const SUPERVISOR_MOCKS = (amount) => {
+export const CASHIER_MOCKS = (amount) => {
   let mocks = [];
 
   for (let i = 0; i <= amount; i++) {
-    let supervisor = {
+    let cashier = {
       name: faker.person.firstName,
       surname: faker.person.lastName,
       age: faker.person.age,
@@ -16,7 +16,7 @@ export const SUPERVISOR_MOCKS = (amount) => {
       cashNumber: faker.number.int({ min: 1000, max: 9999 })
     };
 
-    mocks.push(new Supervisor(supervisor));
+    mocks.push(new Cashier(cashier));
   }
 
   return mocks;

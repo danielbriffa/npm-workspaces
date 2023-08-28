@@ -1,4 +1,4 @@
-export default class {
+export const Employee = class {
   name;
   surname;
   age;
@@ -7,14 +7,14 @@ export default class {
   wage;
 
   getFullName() {
-    return `${this.#name} ${this.#surname}`;
+    return `${this.name} ${this.surname}`;
   }
 
   getAge() {
-    return this.#age;
+    return this.age;
   }
 
   getMobileNumber() {
-    return this.#mobileNumber;
+    return this.mobileNumber;
   }
-}
+};

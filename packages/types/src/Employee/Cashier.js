@@ -1,6 +1,6 @@
-import Base from './Base';
+import { Employee } from './Base';
 
-export const Cashier = class extends Base {
+export const Cashier = class extends Employee {
   #department;
   #cashNumber;
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build -w mocks && npm run build -w services && npm run build -w stores && npm run build -w types"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "packages\\types",
     "packages\\mocks",
     "packages\\stores"
-  ]
+  ],
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
 }

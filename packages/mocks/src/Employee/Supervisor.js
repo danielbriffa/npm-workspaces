@@ -1,4 +1,4 @@
-import { Supervisor } from 'packages\\mocks';
+import { Supervisor } from '@my-workspaces/types';
 import { faker } from '@faker-js/faker';
 
 export const SUPERVISOR_MOCKS = (amount) => {

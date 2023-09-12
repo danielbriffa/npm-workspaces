@@ -1,21 +1,29 @@
 {
-  "name": "npm_workspaces",
-  "version": "1.0.0",
+  "name": "my-workspaces",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build -w mocks && npm run build -w services && npm run build -w stores && npm run build -w types"
+    "buildMocks": "npm run build -w packages/mocks && npm run echoFinish",
+    "buildServices": "npm run build -w packages/services && npm run echoFinish",
+    "buildStores": "npm run build -w packages/stores && npm run echoFinish",
+    "buildTypes": "npm run build -w packages/types && npm run echoFinish",
+    "echoFinish": "echo 'build finished 🏆🏆'",
+    "build": "npm run buildMocks && npm run buildServices && npm run buildStores && npm run buildTypes && node ./buildScript",
+    "publish": "cd ./build && npm publish"
   },
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages\\services",
-    "packages\\types",
-    "packages\\mocks",
-    "packages\\stores"
+    "packages/services",
+    "packages/types",
+    "packages/mocks",
+    "packages/stores"
   ],
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "fs-extra": "^11.1.1",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   }

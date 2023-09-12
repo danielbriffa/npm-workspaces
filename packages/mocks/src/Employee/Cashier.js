@@ -1,4 +1,4 @@
-import { Cashier } from 'packages\\mocks';
+import { Cashier } from '@my-workspaces/types';
 import { faker } from '@faker-js/faker';
 
 export const CASHIER_MOCKS = (amount) => {

@@ -4,8 +4,10 @@ module.exports = {
   entry: './src/index.js',
   mode: 'production',
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'types',
+    libraryTarget: 'commonjs2'
   },
   module: {
     // babel configuration is below:

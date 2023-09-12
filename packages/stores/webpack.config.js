@@ -4,8 +4,11 @@ module.exports = {
   entry: './src/index.js',
   mode: 'production',
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    // filename: '[name].bundle.js',
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'stores',
+    libraryTarget: 'commonjs2'
   },
   externals: { pinia: 'pinia' },
   module: {

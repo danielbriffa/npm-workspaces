@@ -4,10 +4,12 @@ module.exports = {
   entry: './src/index.js',
   mode: 'production',
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'services',
+    libraryTarget: 'commonjs2'
   },
-  externals: { mock: 'mock' },
+  externals: { mocks: 'mocks', 'faker-js': 'faker-js' },
   module: {
     // babel configuration is below:
     rules: [

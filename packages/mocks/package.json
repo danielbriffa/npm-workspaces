@@ -1,8 +1,8 @@
 {
-  "name": "mocks",
+  "name": "@my-workspaces/mocks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "devDependencies": {
     "@babel/core": "^7.22.11",
     "@babel/preset-env": "^7.22.10",
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/danielbriffa/npm-workspaces/issues"
   },
-  "homepage": "https://github.com/danielbriffa/npm-workspaces#readme"
+  "homepage": "https://github.com/danielbriffa/npm-workspaces#readme",
+  "dependencies": {
+    "@my-workspaces/types": "^1.0.0"
+  }
 }

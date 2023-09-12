@@ -1,1 +1,0 @@
-(()=>{"use strict";(0,pinia.defineStore)("employees",{state:function(){return{employees:[]}},getters:{employees:function(e){return e.employees}},actions:{retrieveEmployees:function(){}}})})();
